@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:)</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 450px;
+            padding: 30px;
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffdfba;
+        }
+
+        p {
+            font-size: 16px;
+            color: #ffffff;
+            margin: 15px 0;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 15px auto;
+            padding: 12px 25px;
+            font-size: 16px;
+            color: #ffffff;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: linear-gradient(135deg, #2575fc, #6a11cb);
+            transform: scale(1.05);
+        }
+
+        .gif {
+            margin-top: 20px;
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="main-page">
+            <h1>You Awake?</h1>
+            <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif?cid=790b76116objhxa1f8gslw61m4glwioef25pxxx2awmaua33&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Soothing GIF" class="gif">
+            <a href="#nightmare-page" class="button" onclick="showPage('nightmare-page')">I Had a Nightmare Again</a>
+            <a href="#instinct-page" class="button" onclick="showPage('instinct-page')">Just Instinct</a>
+        </div>
+
+        <div id="nightmare-page" style="display: none;">
+            <h1>I'm Sorry You Had a Nightmare</h1>
+            <p>Don't worry, maybe I might not be here but you can cry if you want to now.</p>
+            <p>You're safe now. Take some deep breaths, have some water, wash your face, and sleep again.</p>
+            <img src="https://media.giphy.com/media/VdVnXRTxn6SgOn0m4J/giphy.gif?cid=790b7611ewpxhlv3fzuuylt5978y0256u8oafn5bipr8n7yz&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Soothing GIF" class="gif">
+            <a href="#comforting-page" class="button" onclick="showPage('comforting-page')">Next</a>
+        </div>
+
+        <div id="comforting-page" style="display: none;">
+            <h1>Everything Will Be Okay</h1>
+            <p>Remember, you're strong, and this moment will pass. Try to relax and get some rest.</p>
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHJ6ZWM1d215ODQ3OTNoNWVza3B4MG90dWplZW15Yjk0cGswdWJ5NiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/jXRknYt1gSs4xTeONI/giphy.gif" alt="Soothing GIF" class="gif">
+            <a href="#main-page" class="button" onclick="showPage('main-page')">Go Back</a>
+        </div>
+
+        <div id="instinct-page" style="display: none;">
+            <h1>It's Okay</h1>
+            <p>Sometimes our mind just wanders. Try to rest or do something calming until you feel sleepy again. Also, drink some water :)</p>
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXBmZnR5cTh4ZjMyc2ZxazRpM25oNjVvM2l6NzdyN2hrd3gxa2hiZSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/qE86wtoTSWzaSDVYix/giphy.gif" alt="Soothing GIF" class="gif">
+            <a href="#main-page" class="button" onclick="showPage('main-page')">Go Back</a>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            const pages = ['main-page', 'nightmare-page', 'comforting-page', 'instinct-page'];
+            pages.forEach(page => {
+                document.getElementById(page).style.display = page === pageId ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
